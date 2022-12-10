@@ -43,11 +43,16 @@
             this.iFrameLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miiSizeLabel = new System.Windows.Forms.Label();
+            this.miiSizeComboBox = new System.Windows.Forms.ComboBox();
+            this.damageTypeLabel = new System.Windows.Forms.Label();
+            this.damageTypeComboBox = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // driverComboBox
             // 
+            this.driverComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.driverComboBox.FormattingEnabled = true;
             this.driverComboBox.Items.AddRange(new object[] {
             "Mario",
@@ -98,12 +103,12 @@
             this.driverComboBox.Name = "driverComboBox";
             this.driverComboBox.Size = new System.Drawing.Size(121, 21);
             this.driverComboBox.TabIndex = 0;
-            this.driverComboBox.TextChanged += new System.EventHandler(this.driverComboBox_TextChanged);
+            this.driverComboBox.SelectedIndexChanged += new System.EventHandler(this.driverComboBox_SelectedIndexChanged);
             // 
             // driverLabel
             // 
             this.driverLabel.AutoSize = true;
-            this.driverLabel.Location = new System.Drawing.Point(5, 25);
+            this.driverLabel.Location = new System.Drawing.Point(8, 27);
             this.driverLabel.Name = "driverLabel";
             this.driverLabel.Size = new System.Drawing.Size(35, 13);
             this.driverLabel.TabIndex = 1;
@@ -112,7 +117,7 @@
             // kartLabel
             // 
             this.kartLabel.AutoSize = true;
-            this.kartLabel.Location = new System.Drawing.Point(132, 26);
+            this.kartLabel.Location = new System.Drawing.Point(135, 27);
             this.kartLabel.Name = "kartLabel";
             this.kartLabel.Size = new System.Drawing.Size(26, 13);
             this.kartLabel.TabIndex = 3;
@@ -120,6 +125,7 @@
             // 
             // kartComboBox
             // 
+            this.kartComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kartComboBox.FormattingEnabled = true;
             this.kartComboBox.Items.AddRange(new object[] {
             "Standard Kart",
@@ -167,12 +173,12 @@
             this.kartComboBox.Name = "kartComboBox";
             this.kartComboBox.Size = new System.Drawing.Size(121, 21);
             this.kartComboBox.TabIndex = 2;
-            this.kartComboBox.TextChanged += new System.EventHandler(this.kartComboBox_TextChanged);
+            this.kartComboBox.SelectedIndexChanged += new System.EventHandler(this.kartComboBox_SelectedIndexChanged);
             // 
             // wheelLabel
             // 
             this.wheelLabel.AutoSize = true;
-            this.wheelLabel.Location = new System.Drawing.Point(259, 26);
+            this.wheelLabel.Location = new System.Drawing.Point(8, 64);
             this.wheelLabel.Name = "wheelLabel";
             this.wheelLabel.Size = new System.Drawing.Size(38, 13);
             this.wheelLabel.TabIndex = 5;
@@ -180,6 +186,7 @@
             // 
             // wheelComboBox
             // 
+            this.wheelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.wheelComboBox.FormattingEnabled = true;
             this.wheelComboBox.Items.AddRange(new object[] {
             "Standard",
@@ -201,18 +208,19 @@
             "Retro Off-Road",
             "Gold Tires",
             "GLA Tires",
+            "Triforce Tires",
             "Leaf Tires",
             "Ancient Tires"});
-            this.wheelComboBox.Location = new System.Drawing.Point(262, 42);
+            this.wheelComboBox.Location = new System.Drawing.Point(8, 80);
             this.wheelComboBox.Name = "wheelComboBox";
             this.wheelComboBox.Size = new System.Drawing.Size(121, 21);
             this.wheelComboBox.TabIndex = 4;
-            this.wheelComboBox.TextChanged += new System.EventHandler(this.wheelComboBox_TextChanged);
+            this.wheelComboBox.SelectedIndexChanged += new System.EventHandler(this.wheelComboBox_SelectedIndexChanged);
             // 
             // gliderLabel
             // 
             this.gliderLabel.AutoSize = true;
-            this.gliderLabel.Location = new System.Drawing.Point(386, 26);
+            this.gliderLabel.Location = new System.Drawing.Point(135, 64);
             this.gliderLabel.Name = "gliderLabel";
             this.gliderLabel.Size = new System.Drawing.Size(34, 13);
             this.gliderLabel.TabIndex = 7;
@@ -220,6 +228,7 @@
             // 
             // gliderComboBox
             // 
+            this.gliderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gliderComboBox.FormattingEnabled = true;
             this.gliderComboBox.Items.AddRange(new object[] {
             "Super Glider",
@@ -237,16 +246,16 @@
             "Hylian Kite",
             "Paper Glider",
             "Paraglider"});
-            this.gliderComboBox.Location = new System.Drawing.Point(389, 42);
+            this.gliderComboBox.Location = new System.Drawing.Point(135, 80);
             this.gliderComboBox.Name = "gliderComboBox";
             this.gliderComboBox.Size = new System.Drawing.Size(121, 21);
             this.gliderComboBox.TabIndex = 6;
-            this.gliderComboBox.TextChanged += new System.EventHandler(this.gliderComboBox_TextChanged);
+            this.gliderComboBox.SelectedIndexChanged += new System.EventHandler(this.gliderComboBox_SelectedIndexChanged);
             // 
             // iFrameFactorLabel
             // 
             this.iFrameFactorLabel.AutoSize = true;
-            this.iFrameFactorLabel.Location = new System.Drawing.Point(6, 71);
+            this.iFrameFactorLabel.Location = new System.Drawing.Point(360, 46);
             this.iFrameFactorLabel.Name = "iFrameFactorLabel";
             this.iFrameFactorLabel.Size = new System.Drawing.Size(126, 13);
             this.iFrameFactorLabel.TabIndex = 8;
@@ -254,7 +263,7 @@
             // 
             // iFrameFactorTextBox
             // 
-            this.iFrameFactorTextBox.Location = new System.Drawing.Point(138, 68);
+            this.iFrameFactorTextBox.Location = new System.Drawing.Point(489, 42);
             this.iFrameFactorTextBox.Name = "iFrameFactorTextBox";
             this.iFrameFactorTextBox.ReadOnly = true;
             this.iFrameFactorTextBox.Size = new System.Drawing.Size(100, 20);
@@ -262,7 +271,7 @@
             // 
             // iFrameTextBox
             // 
-            this.iFrameTextBox.Location = new System.Drawing.Point(362, 68);
+            this.iFrameTextBox.Location = new System.Drawing.Point(489, 79);
             this.iFrameTextBox.Name = "iFrameTextBox";
             this.iFrameTextBox.ReadOnly = true;
             this.iFrameTextBox.Size = new System.Drawing.Size(100, 20);
@@ -271,7 +280,7 @@
             // iFrameLabel
             // 
             this.iFrameLabel.AutoSize = true;
-            this.iFrameLabel.Location = new System.Drawing.Point(258, 71);
+            this.iFrameLabel.Location = new System.Drawing.Point(388, 82);
             this.iFrameLabel.Name = "iFrameLabel";
             this.iFrameLabel.Size = new System.Drawing.Size(98, 13);
             this.iFrameLabel.TabIndex = 10;
@@ -283,7 +292,7 @@
             this.creditsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(523, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(602, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -294,11 +303,77 @@
             this.creditsToolStripMenuItem.Text = "Credits";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.creditsToolStripMenuItem_Click);
             // 
+            // miiSizeLabel
+            // 
+            this.miiSizeLabel.AutoSize = true;
+            this.miiSizeLabel.Location = new System.Drawing.Point(262, 27);
+            this.miiSizeLabel.Name = "miiSizeLabel";
+            this.miiSizeLabel.Size = new System.Drawing.Size(48, 13);
+            this.miiSizeLabel.TabIndex = 13;
+            this.miiSizeLabel.Text = "Mii Class";
+            // 
+            // miiSizeComboBox
+            // 
+            this.miiSizeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.miiSizeComboBox.Enabled = false;
+            this.miiSizeComboBox.FormattingEnabled = true;
+            this.miiSizeComboBox.Items.AddRange(new object[] {
+            "Light",
+            "Medium",
+            "Heavy"});
+            this.miiSizeComboBox.Location = new System.Drawing.Point(262, 42);
+            this.miiSizeComboBox.Name = "miiSizeComboBox";
+            this.miiSizeComboBox.Size = new System.Drawing.Size(92, 21);
+            this.miiSizeComboBox.TabIndex = 14;
+            this.miiSizeComboBox.SelectedIndexChanged += new System.EventHandler(this.miiSizeComboBox_SelectedIndexChanged);
+            // 
+            // damageTypeLabel
+            // 
+            this.damageTypeLabel.AutoSize = true;
+            this.damageTypeLabel.Location = new System.Drawing.Point(262, 64);
+            this.damageTypeLabel.Name = "damageTypeLabel";
+            this.damageTypeLabel.Size = new System.Drawing.Size(74, 13);
+            this.damageTypeLabel.TabIndex = 16;
+            this.damageTypeLabel.Text = "Damage Type";
+            // 
+            // damageTypeComboBox
+            // 
+            this.damageTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.damageTypeComboBox.FormattingEnabled = true;
+            this.damageTypeComboBox.Items.AddRange(new object[] {
+            "Single Spin (Type 1)",
+            "Double Spin (Type 2)",
+            "Single Spin (Type 1)",
+            "Double Spin (Type 2)",
+            "Oil / Water Spin",
+            "Fire Spin",
+            "Double Spin (Type 3)",
+            "Map Object Shock",
+            "Double Spin (Type 3)",
+            "Explosion (Type 1)",
+            "Double Flip (Type 1)",
+            "Explosion (Type 2)",
+            "Car Hit",
+            "Double Flip (Type 2)",
+            "Single Flip (Type 1)",
+            "Single Flip (Type 1)",
+            "Bad Start",
+            "Crush"});
+            this.damageTypeComboBox.Location = new System.Drawing.Point(262, 80);
+            this.damageTypeComboBox.Name = "damageTypeComboBox";
+            this.damageTypeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.damageTypeComboBox.TabIndex = 15;
+            this.damageTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.damageTypeComboBox_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 97);
+            this.ClientSize = new System.Drawing.Size(602, 112);
+            this.Controls.Add(this.damageTypeLabel);
+            this.Controls.Add(this.damageTypeComboBox);
+            this.Controls.Add(this.miiSizeComboBox);
+            this.Controls.Add(this.miiSizeLabel);
             this.Controls.Add(this.iFrameTextBox);
             this.Controls.Add(this.iFrameLabel);
             this.Controls.Add(this.iFrameFactorTextBox);
@@ -312,8 +387,10 @@
             this.Controls.Add(this.driverLabel);
             this.Controls.Add(this.driverComboBox);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "MK8DX iFrame Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -340,6 +417,10 @@
         private System.Windows.Forms.Label iFrameLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
+        private System.Windows.Forms.Label miiSizeLabel;
+        private System.Windows.Forms.ComboBox miiSizeComboBox;
+        private System.Windows.Forms.Label damageTypeLabel;
+        private System.Windows.Forms.ComboBox damageTypeComboBox;
     }
 }
 
